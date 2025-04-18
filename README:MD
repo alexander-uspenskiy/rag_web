@@ -6,7 +6,7 @@ RAG Web is a Python-based application that combines web search and natural langu
 
 1. Clone the repository:  
     ```bash  
-    git clone <repository-url>  
+    git clone https://github.com/alexander-uspenskiy/rag_web  
     cd rag_web  
     ```  
 
