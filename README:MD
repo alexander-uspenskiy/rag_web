@@ -1,0 +1,57 @@
+# RAG Web  
+
+RAG Web is a Python-based application that combines web search and natural language processing to answer user queries. It uses DuckDuckGo for retrieving web search results and a Hugging Face model for generating answers based on the retrieved context.  
+
+## Installation  
+
+1. Clone the repository:  
+    ```bash  
+    git clone <repository-url>  
+    cd rag_web  
+    ```  
+
+2. Create a virtual environment and activate it:  
+    ```bash  
+    python3 -m venv venv  
+    source venv/bin/activate  # On Windows: venv\Scripts\activate  
+    ```  
+
+3. Install the required dependencies:  
+    ```bash  
+    pip install -r requirements.txt  
+    ```  
+
+## Project Structure  
+
+```
+rag_web/  
+├── .gitignore           # Ignored files and directories  
+├── requirements.txt     # Python dependencies  
+├── README:MD            # Project documentation  
+├── rag_web.py           # Main application script  
+```  
+
+## Functionality  
+
+1. **Web Search**:  
+    - Uses DuckDuckGo to retrieve web search results for a given query.  
+    - Extracts and formats the content into a readable context.  
+
+2. **Answer Generation**:  
+    - Loads a Hugging Face text-generation model.  
+    - Combines the retrieved context and user query to generate an answer.  
+
+3. **Interactive CLI**:  
+    - Provides a command-line interface for users to ask questions interactively.  
+
+## Memory and Performance Usage  
+
+- **Memory**:  
+  - The Hugging Face model may require significant memory, especially on GPUs. Ensure sufficient resources are available.  
+  - Web search and context formatting are lightweight operations.  
+
+- **Performance**:  
+  - Web search depends on DuckDuckGo's response time.  
+  - Answer generation time depends on the complexity of the query and the model's size.  
+
+For optimal performance, use a machine with a modern GPU and sufficient VRAM.  
