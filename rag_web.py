@@ -1,4 +1,5 @@
 from transformers import pipeline
+
 from duckduckgo_search import DDGS
 import textwrap
 import re
@@ -26,9 +27,9 @@ qa_pipeline = pipeline(
 # 4. Main QA function
 def answer_question(query):
     context = get_context(query)
-    print("\n🔍 Web Context Retrieved:\n")
+    print("\n Web Context Retrieved:\n")
     print(context)
-    print("\n🧠 Generating answer...")
+    print("\n Generating answer...")
 
     prompt = f"""[CONTEXT]
 {context}
